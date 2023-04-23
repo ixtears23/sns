@@ -11,21 +11,22 @@ spring:
     url: jdbc:mysql://localhost:3306/fast_sns?rewriteBatchedStatements=true&characterEncoding=UTF-8&serverTimezone=Asia/Seoul
     password:
 
-
-springdoc:
-  api-docs:
-    enabled: true
-    path: /api-docs
-  swagger-ui:
-    enabled: true
-    path: /swagger-ui/api-docs.html
-  packagesToScan: junseok.snr.sns.controller
-  pathsToMatch: /api
-  showActuator: true
-#  use-management-port: true
-#
-#management:
-#  endpoints:
-#    web:
-#      exposure:
+management:
+  endpoints:
+    web:
+      base-path: /api
+      exposure:
+        include: '*'
 #        include: openapi, swagger-ui
+
+#springdoc:
+#  api-docs:
+#    enabled: true
+#    path: /api
+#  swagger-ui:
+#    enabled: true
+#    path: /swagger-ui/api-docs.html
+#  packagesToScan: junseok.snr.sns.controller
+#  pathsToMatch: /api
+#  showActuator: true
+#  use-management-port: true

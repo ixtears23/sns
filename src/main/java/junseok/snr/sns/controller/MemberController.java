@@ -1,5 +1,7 @@
 package junseok.snr.sns.controller;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import junseok.snr.sns.domain.member.dto.RegisterMemberCommand;
 import junseok.snr.sns.domain.member.entity.Member;
 import junseok.snr.sns.domain.member.service.MemberWriteService;
