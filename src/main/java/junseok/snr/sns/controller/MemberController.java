@@ -11,10 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RequiredArgsConstructor
 @RestController
+@RequestMapping("/members")
 public class MemberController {
     private final MemberWriteService memberWriteService;
 
-    @PostMapping("/members")
+    @PostMapping
     public Member register(@RequestBody RegisterMemberCommand command) {
         return memberWriteService.create(command);
     }
